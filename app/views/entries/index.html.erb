@@ -1,0 +1,26 @@
+<h1>My Entries</h1>
+
+<% if @entries.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @entries.each do |entry| %>
+        <tr>
+          <td><%= entry.title %></td>
+          <td><%= entry.body %></td>
+          <td><%= link_to "Edit", edit_entry_path(entry) %> <%= link_to "Delete", entry_path(entry), method: :delete, data: { confirm: "Are you sure?" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No entries found.</p>
+<% end %>
+
+<%= link_to "New Entry", new_entry_path %>
