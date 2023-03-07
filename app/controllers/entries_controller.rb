@@ -1,6 +1,8 @@
 class EntriesController < ApplicationController
+
   def index
-    @entries = Entry.all #current_user.entries
+    # @entries = Entry.all
+    @entries = Entry.where(user_id: current_user.id)
   end
 
   def new
