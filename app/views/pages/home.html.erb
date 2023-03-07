@@ -4,7 +4,10 @@
       <h1>Welcome <%= current_user.email %> to AMP</h1>
     </div>
     <div>
-      <%= link_to "List of your Entries", entries_path %>
+      <%= link_to "List of your Email Entries", entries_path %>
+    </div>
+    <div>
+      <%= link_to "Add an Email Entry", new_entry_path %>
     </div>
   <% else %>
     <h1> Need to be logged in to make use of AMP</h1>
