@@ -1,0 +1,16 @@
+<h1>Add a new entry:</h1>
+
+<%= form_for :entry, url: entries_path do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <%= f.submit "Create Entry" %>
+<% end %>

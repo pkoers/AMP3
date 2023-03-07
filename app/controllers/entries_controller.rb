@@ -8,7 +8,8 @@ class EntriesController < ApplicationController
   end
 
   def create
-    @entry = current_user.entries.build(entry_params)
+    @entry = Entry.new(entry_params)
+    # @entry = current_user.entries.build(entry_params)
 
     if @entry.save
       redirect_to entries_path, notice: "Entry created successfully!"
@@ -20,6 +21,6 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:title, :body)
+    params.require(:entry).permit(:first_name, :last_name, :email, :user_id)
   end
 end
