@@ -3,6 +3,8 @@ class PagesController < ApplicationController
 
   def home
     # command to send emails via mailtrap
-    SendMailer.send_email.deliver_now
+    if current_user.present?
+      SendMailer.send_email(current_user).deliver_now
+    end
   end
 end
