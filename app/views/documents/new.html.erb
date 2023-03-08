@@ -1,0 +1,13 @@
+<%= form_with url: documents_path, local: true, multipart: true do |form| %>
+  <p>
+    <%= form.label :document, "Upload a file" %><br>
+    <%= form.file_field :document %>
+  </p>
+  <p>
+    <%= form.label :description, "Description" %><br>
+    <%= form.text_field :description %>
+  </p>
+  <p>
+    <%= form.submit "Upload" %>
+  </p>
+<% end %>
