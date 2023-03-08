@@ -17,7 +17,7 @@
               <td><%= entry.first_name %></td>
               <td><%= entry.last_name %></td>
               <td><%= entry.email%></td>
-              <td><%= link_to "Edit", edit_entry_path(entry) %> <%= link_to "Delete", entry_path(entry), method: :delete, data: { confirm: "Are you sure?" } %></td>
+              <td><%= link_to "Edit", edit_entry_path(entry) %> <%= link_to "Delete", delete_entry_path(entry), method: :delete, data: { confirm: "Are you sure?" } %></td>
             </tr>
           <% end %>
         </tbody>

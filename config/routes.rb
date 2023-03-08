@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :entries
+  delete "/entries/:id", to: "entries#destroy", as: "delete_entry"
+
   resources :documents
   post "/documents/new", to: "documents#create"
 end
