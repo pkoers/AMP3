@@ -27,7 +27,7 @@ class DocumentsController < ApplicationController
 
   def document_params
     # params.require(:document)
-    params.require(:document).permit(:title, :description)
+    params.require(:document).permit(:document, :description)
     # params.require(:document).permit(:document, :description).tap do |whitelisted|
     #  whitelisted[:title] = params[:document][:document].original_filename
     # end
