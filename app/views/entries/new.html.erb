@@ -2,13 +2,13 @@
 
 <%= form_for :entry, url: entries_path do |f| %>
   <%= f.label :first_name %>
-  <%= f.text_field :first_name, size: 50 %>
+  <%= f.text_field :first_name %>
 
   <%= f.label :last_name %>
-  <%= f.text_field :last_name, size: 50 %>
+  <%= f.text_field :last_name %>
 
   <%= f.label :email %>
-  <%= f.email_field :email, size: 50 %>
+  <%= f.email_field :email %>
 
   <%= f.hidden_field :user_id, value: current_user.id %>
 
