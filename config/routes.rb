@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  get '/pages/post', to: 'pages#post'
+  get '/post', to: 'pages#post'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
