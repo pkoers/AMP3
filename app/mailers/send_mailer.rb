@@ -16,8 +16,11 @@ class SendMailer < ApplicationMailer
     attachments['LDM.txt'] = File.read(Rails.public_path.join('LDM.txt'))
     # attachments['LDM.txt'] = { mime_type: 'text/plain', content: file.read }
 
-    mail(to: user, from: 'amp@mixty.com', subject: 'Test Email') do |format|
-      format.text { render plain: 'This is a test email.' }
+    mail(to: user, from: 'amp@mixty.com', subject: 'KL690 / 09MAR / CUNAMS - Load Message - TEST IGNORE') do |format|
+      format.text { render plain: 'This is an automated e-mail from Altea Flight Management.
+        NOT FOR OPERATIONAL USE - TEST
+        Please do not reply.
+        ' }
     end
   end
 
